@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bloodBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18040a" />
+      <stop offset="50%" stop-color="#3b0716" />
+      <stop offset="100%" stop-color="#0f0207" />
+    </linearGradient>
+    <linearGradient id="fireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185" />
+      <stop offset="50%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#881337" />
+    </linearGradient>
+    <filter id="crimsonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bloodBg)" />
+
+  <!-- Ominous Blood Moon in Background -->
+  <circle cx="400" cy="180" r="120" fill="url(#fireGrad)" opacity="0.3" filter="url(#crimsonGlow)" />
+  <circle cx="400" cy="180" r="90" fill="none" stroke="#f43f5e" stroke-width="2" opacity="0.6" stroke-dasharray="12 6" />
+
+  <!-- Boss Figure Silhouette (Imposing Armored Knight/Demon) -->
+  <g transform="translate(400, 240) scale(1.4)">
+    <!-- Horns / Crown -->
+    <path d="M-30,-70 L-45,-110 L-20,-85 L0,-120 L20,-85 L45,-110 L30,-70 Z" fill="#0f0207" stroke="#f43f5e" stroke-width="1.5" />
+    <!-- Shoulders & Pauldrons -->
+    <path d="M-60,-40 L-85,-30 L-50,0 L0,-10 L50,0 L85,-30 L60,-40 Z" fill="#18040a" stroke="#fb7185" stroke-width="1" />
+    <!-- Torso -->
+    <path d="M-35,-30 L35,-30 L25,40 L-25,40 Z" fill="#0f0207" />
+    <!-- Glowing Boss Eyes -->
+    <ellipse cx="-12" cy="-60" rx="4" ry="2" fill="#fda4af" filter="url(#crimsonGlow)" />
+    <ellipse cx="12" cy="-60" rx="4" ry="2" fill="#fda4af" filter="url(#crimsonGlow)" />
+  </g>
+
+  <!-- Giant Greatsword Arc & Slash trail -->
+  <path d="M 120 340 Q 400 60 680 340" fill="none" stroke="#f43f5e" stroke-width="6" stroke-linecap="round" filter="url(#crimsonGlow)" />
+  <path d="M 160 330 Q 400 90 640 330" fill="none" stroke="#ffe4e6" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Player Parry Spark / Impact Point -->
+  <g transform="translate(400, 190)">
+    <circle cx="0" cy="0" r="10" fill="#ffffff" filter="url(#crimsonGlow)" />
+    <line x1="-30" y1="-30" x2="30" y2="30" stroke="#ffffff" stroke-width="3" />
+    <line x1="-30" y1="30" x2="30" y2="-30" stroke="#ffffff" stroke-width="3" />
+    <line x1="0" y1="-40" x2="0" y2="40" stroke="#fb7185" stroke-width="2" />
+    <line x1="-40" y1="0" x2="40" y2="0" stroke="#fb7185" stroke-width="2" />
+  </g>
+
+  <!-- Floating Embers -->
+  <circle cx="280" cy="220" r="3" fill="#f43f5e" filter="url(#crimsonGlow)" />
+  <circle cx="520" cy="240" r="2.5" fill="#f43f5e" filter="url(#crimsonGlow)" />
+  <circle cx="340" cy="130" r="2" fill="#fb7185" />
+  <circle cx="460" cy="110" r="3" fill="#fb7185" filter="url(#crimsonGlow)" />
+
+  <text x="40" y="415" font-family="'Orbitron', 'Segoe UI', sans-serif" font-weight="900" font-size="28" fill="#ffffff" letter-spacing="4">SHADOWS OF ELDORIA</text>
+  <text x="40" y="435" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#fb7185" letter-spacing="2">UNITY • SOULS-LIKE COMBAT &amp; HIERARCHICAL FSM AI</text>
+</svg>

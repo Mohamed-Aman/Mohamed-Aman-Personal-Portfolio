@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="outbreakSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0305" />
+      <stop offset="50%" stop-color="#1c070c" />
+      <stop offset="100%" stop-color="#2a0812" />
+    </linearGradient>
+    <linearGradient id="fogGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0" />
+      <stop offset="50%" stop-color="#f43f5e" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#e11d48" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="flashlightBeam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#fef08a" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#e11d48" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="hazardStripes" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <filter id="crimsonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Dark Post-Apocalyptic Sky -->
+  <rect width="800" height="450" fill="url(#outbreakSky)" />
+
+  <!-- Blood Moon / Quarantine Flare -->
+  <circle cx="180" cy="120" r="50" fill="#e11d48" opacity="0.3" filter="url(#crimsonGlow)" />
+  <circle cx="180" cy="120" r="32" fill="#f43f5e" opacity="0.7" />
+
+  <!-- Ruined Skyline Silhouette (Broken Windows & Twisted Rebar) -->
+  <g fill="#0f0306">
+    <rect x="30" y="110" width="80" height="230" />
+    <rect x="130" y="160" width="70" height="180" />
+    <polygon points="220,340 220,130 260,80 300,140 300,340" />
+    <rect x="320" y="150" width="110" height="190" />
+    <polygon points="450,340 450,170 510,110 540,190 540,340" />
+    <rect x="560" y="130" width="90" height="210" />
+    <rect x="670" y="90" width="100" height="250" />
+  </g>
+
+  <!-- Atmospheric Fog Band -->
+  <rect y="220" width="800" height="150" fill="url(#fogGlow)" />
+
+  <!-- Broken Barricade & Barbed Wire -->
+  <g stroke="#260810" stroke-width="3">
+    <line x1="0" y1="350" x2="800" y2="350" />
+    <line x1="80" y1="330" x2="140" y2="370" />
+    <line x1="140" y1="330" x2="80" y2="370" />
+    <line x1="280" y1="330" x2="340" y2="370" />
+    <line x1="340" y1="330" x2="280" y2="370" />
+    <line x1="620" y1="330" x2="680" y2="370" />
+    <line x1="680" y1="330" x2="620" y2="370" />
+  </g>
+
+  <!-- Survivor with Weapon & Powerful Flashlight Beam -->
+  <g>
+    <!-- Tactical Flashlight Beam illuminating the darkness -->
+    <polygon points="120,320 680,260 720,390 120,335" fill="url(#flashlightBeam)" />
+
+    <!-- Survivor Silhouette -->
+    <g fill="#f8fafc">
+      <!-- Head -->
+      <circle cx="112" cy="305" r="7" />
+      <!-- Body & Tactical Vest -->
+      <path d="M 104 314 L 120 314 L 122 340 L 102 340 Z" />
+      <!-- Legs -->
+      <line x1="106" y1="340" x2="100" y2="365" stroke="#f8fafc" stroke-width="4" />
+      <line x1="118" y1="340" x2="124" y2="365" stroke="#f8fafc" stroke-width="4" />
+      <!-- Aimed Assault Rifle Barrel -->
+      <line x1="116" y1="322" x2="145" y2="320" stroke="#f8fafc" stroke-width="4" stroke-linecap="round" />
+      <!-- Muzzle Glow -->
+      <circle cx="146" cy="320" r="3" fill="#fef08a" />
+    </g>
+  </g>
+
+  <!-- Swarming Zombie Silhouettes Caught in Flashlight -->
+  <g fill="#050102">
+    <!-- Zombie 1 (Lunging) -->
+    <circle cx="560" cy="285" r="8" />
+    <path d="M 552 295 L 568 293 L 565 330 L 548 330 Z" />
+    <line x1="565" y1="300" x2="540" y2="295" stroke="#050102" stroke-width="3" />
+    <line x1="552" y1="330" x2="542" y2="365" stroke="#050102" stroke-width="4" />
+    <line x1="563" y1="330" x2="572" y2="365" stroke="#050102" stroke-width="4" />
+    <!-- Glowing Eye -->
+    <circle cx="557" cy="285" r="1.5" fill="#f43f5e" />
+
+    <!-- Zombie 2 (Stumbling) -->
+    <circle cx="620" cy="290" r="7.5" />
+    <path d="M 614 300 L 628 300 L 625 332 L 611 332 Z" />
+    <line x1="626" y1="305" x2="600" y2="302" stroke="#050102" stroke-width="3" />
+    <line x1="614" y1="332" x2="608" y2="365" stroke="#050102" stroke-width="3.5" />
+    <line x1="623" y1="332" x2="628" y2="365" stroke="#050102" stroke-width="3.5" />
+    <!-- Glowing Eye -->
+    <circle cx="617" cy="290" r="1.5" fill="#f43f5e" />
+
+    <!-- Distant Swarm Silhouettes -->
+    <circle cx="680" cy="298" r="6" />
+    <rect x="675" y="305" width="10" height="25" />
+    <circle cx="720" cy="302" r="5.5" />
+    <rect x="716" y="308" width="9" height="22" />
+    <circle cx="750" cy="300" r="6" />
+    <rect x="746" y="306" width="9" height="24" />
+  </g>
+
+  <!-- Foreground Broken Ground / Debris -->
+  <polygon points="0,360 800,360 800,450 0,450" fill="#080204" />
+  <line x1="0" y1="360" x2="800" y2="360" stroke="#e11d48" stroke-width="2" opacity="0.6" />
+
+  <!-- Biohazard Warning Emblem in Background Corner -->
+  <g transform="translate(710, 60)" opacity="0.25">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#f43f5e" stroke-width="3" />
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#f43f5e" stroke-width="3" />
+    <path d="M 0 -25 L 0 25 M -25 0 L 25 0" stroke="#f43f5e" stroke-width="3" />
+  </g>
+
+  <!-- Title Watermark Badge -->
+  <g transform="translate(400, 410)">
+    <text x="0" y="0" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" letter-spacing="4">OUTBREAK: LAST STAND</text>
+    <text x="0" y="18" text-anchor="middle" fill="#f43f5e" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="2">UNREAL ENGINE 5 • SOLO SURVIVAL TITLE</text>
+  </g>
+</svg>

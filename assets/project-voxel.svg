@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="voxelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050d1a" />
+      <stop offset="50%" stop-color="#0c2340" />
+      <stop offset="100%" stop-color="#021329" />
+    </linearGradient>
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <filter id="glowBlue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#voxelBg)" />
+
+  <!-- Wireframe Grid Coordinates -->
+  <g stroke="#1e3a8a" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="225" x2="800" y2="225" stroke-dasharray="4 4" />
+    <line x1="400" y1="0" x2="400" y2="450" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- 3D Isometric Voxel Cube Cluster -->
+  <!-- Top level voxel 1 -->
+  <g transform="translate(400, 150)">
+    <!-- Top Face -->
+    <polygon points="0,-40 50,-15 0,10 -50,-15" fill="#38bdf8" stroke="#0284c7" stroke-width="1.5" />
+    <!-- Left Face -->
+    <polygon points="-50,-15 0,10 0,65 -50,40" fill="#0284c7" stroke="#0369a1" stroke-width="1.5" />
+    <!-- Right Face -->
+    <polygon points="0,10 50,-15 50,40 0,65" fill="#0369a1" stroke="#075985" stroke-width="1.5" />
+  </g>
+
+  <!-- Voxel 2 (Left) -->
+  <g transform="translate(350, 180)">
+    <polygon points="0,-40 50,-15 0,10 -50,-15" fill="#0284c7" stroke="#0369a1" stroke-width="1.5" />
+    <polygon points="-50,-15 0,10 0,65 -50,40" fill="#0369a1" stroke="#075985" stroke-width="1.5" />
+    <polygon points="0,10 50,-15 50,40 0,65" fill="#075985" stroke="#0c4a6e" stroke-width="1.5" />
+  </g>
+
+  <!-- Voxel 3 (Right) -->
+  <g transform="translate(450, 180)">
+    <polygon points="0,-40 50,-15 0,10 -50,-15" fill="#38bdf8" stroke="#0284c7" stroke-width="1.5" />
+    <polygon points="-50,-15 0,10 0,65 -50,40" fill="#0284c7" stroke="#0369a1" stroke-width="1.5" />
+    <polygon points="0,10 50,-15 50,40 0,65" fill="#0369a1" stroke="#075985" stroke-width="1.5" />
+  </g>
+
+  <!-- Floating Disassembled Wireframe Voxel with Vertices -->
+  <g transform="translate(240, 120) scale(0.7)">
+    <polygon points="0,-40 50,-15 0,10 -50,-15" fill="none" stroke="#67e8f9" stroke-width="2" stroke-dasharray="4 2" />
+    <polygon points="-50,-15 0,10 0,65 -50,40" fill="none" stroke="#67e8f9" stroke-width="2" stroke-dasharray="4 2" />
+    <polygon points="0,10 50,-15 50,40 0,65" fill="none" stroke="#67e8f9" stroke-width="2" stroke-dasharray="4 2" />
+    <circle cx="0" cy="-40" r="4" fill="#a5f3fc" filter="url(#glowBlue)" />
+    <circle cx="50" cy="-15" r="4" fill="#a5f3fc" filter="url(#glowBlue)" />
+    <circle cx="0" cy="10" r="4" fill="#a5f3fc" filter="url(#glowBlue)" />
+    <circle cx="-50" cy="-15" r="4" fill="#a5f3fc" filter="url(#glowBlue)" />
+  </g>
+
+  <g transform="translate(560, 130) scale(0.7)">
+    <polygon points="0,-40 50,-15 0,10 -50,-15" fill="none" stroke="#67e8f9" stroke-width="2" />
+    <polygon points="-50,-15 0,10 0,65 -50,40" fill="none" stroke="#67e8f9" stroke-width="2" />
+    <polygon points="0,10 50,-15 50,40 0,65" fill="none" stroke="#67e8f9" stroke-width="2" />
+    <circle cx="0" cy="-40" r="4" fill="#a5f3fc" filter="url(#glowBlue)" />
+  </g>
+
+  <!-- Low Level Shader / Matrix Graphic overlay -->
+  <text x="60" y="80" font-family="'Courier New', monospace" font-size="14" fill="#38bdf8" opacity="0.7">mat4 u_ProjectionViewMatrix;</text>
+  <text x="60" y="105" font-family="'Courier New', monospace" font-size="14" fill="#38bdf8" opacity="0.7">layout (location = 0) in vec3 aPos;</text>
+  <text x="60" y="130" font-family="'Courier New', monospace" font-size="14" fill="#38bdf8" opacity="0.7">glDrawElementsInstanced(GL_TRIANGLES...);</text>
+
+  <text x="40" y="415" font-family="'Orbitron', 'Segoe UI', sans-serif" font-weight="900" font-size="28" fill="#ffffff" letter-spacing="4">VOXELFORGE ENGINE</text>
+  <text x="40" y="435" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#38bdf8" letter-spacing="2">CUSTOM C++20 • OPENGL 4.5 • GREEDY MESHING</text>
+</svg>

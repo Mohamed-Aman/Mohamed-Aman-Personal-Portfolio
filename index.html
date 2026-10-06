@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mohamed Aman - Game Developer & Gameplay Programmer Portfolio. B.Tech Computer Science graduate specializing in Unreal Engine 5, C++, and Real-Time Systems." />
+  <meta name="keywords" content="Mohamed Aman, Game Developer, Gameplay Programmer, Unreal Engine 5, High Tide, Outbreak Last Stand, Street Heist, Unity, C++, C#, Game Jam, B.Tech Computer Science" />
+  <meta name="author" content="Mohamed Aman" />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mohamed Aman | Game Developer Portfolio" />
+  <meta property="og:description" content="Portfolio of Mohamed Aman - Game Developer & B.Tech CS Graduate specializing in Unreal Engine 5, C++, and interactive game mechanics." />
+  <meta property="og:image" content="assets/project-outbreak.jpg" />
+
+  <title>Mohamed Aman | Game Developer &amp; Gameplay Programmer</title>
+
+  <!-- Prevent Flash of Unstyled Content (FOUC) -->
+  <script>
+    (function() {
+      const storedTheme = localStorage.getItem('portfolio-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      const meta = document.querySelector('meta[name="color-scheme"]');
+      if (meta) meta.content = theme;
+    })();
+  </script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Subtle Interactive Canvas Background -->
+  <canvas id="bg-particles-canvas"></canvas>
+
+  <div class="content-wrapper">
+
+    <!-- ==========================================================================
+         NAVIGATION BAR
+         ========================================================================== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#about" class="nav-brand">
+          <div class="brand-icon">🎮</div>
+          <div class="brand-info">
+            <span class="brand-name">MOHAMED AMAN</span>
+            <span class="brand-tag">GAME DEVELOPER</span>
+          </div>
+        </a>
+
+        <nav>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#about" class="nav-link active">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- Theme Switcher Button (Clean Dual-Theme) -->
+          <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Clean Theme" aria-label="Toggle Clean Theme">
+            ☀️
+          </button>
+
+          <!-- Download CV / Resume Button -->
+          <a href="assets/docs/resume.html" target="_blank" rel="noopener" class="btn btn-secondary btn-outline-sm" title="View & Download Resume">
+            <span>📄</span> Resume / CV
+          </a>
+
+          <a href="#contact" class="btn btn-primary btn-outline-sm">Get in Touch</a>
+
+          <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Mobile Menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==========================================================================
+           HERO SECTION
+           ========================================================================== -->
+      <section class="hero-section" id="about">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <div class="hero-badge-container">
+              <span class="hero-badge">
+                <span class="pulse-dot"></span>
+                B.Tech CS Graduate • EXR School of Game Dev • Game Jam Developer
+              </span>
+            </div>
+
+            <h1 class="hero-title">
+              Crafting Immersive Worlds &amp;
+              <span class="highlight">Responsive Gameplay</span>
+            </h1>
+
+            <div class="hero-subtitle">
+              <span>⚡ Mohamed Aman</span>
+              <span>•</span>
+              <span>Unreal Engine 5 &amp; C++</span>
+              <span>•</span>
+              <span>Physics &amp; AI Systems</span>
+            </div>
+
+            <p class="hero-desc">
+              B.Tech Computer Science graduate and game developer currently advancing in professional game production at <strong>EXR School of Game Dev</strong>. Specializing in <strong>Unreal Engine 5</strong>, gameplay architecture, C++, Blueprints, and dynamic simulation systems. Experienced in shipping collaborative Game Jam titles and building solo gameplay systems.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Projects</span>
+                <span>→</span>
+              </a>
+              <a href="assets/docs/resume.html" target="_blank" rel="noopener" class="btn btn-secondary">
+                <span>Download CV</span>
+                <span>📄</span>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <span>Contact Me</span>
+              </a>
+            </div>
+
+            <!-- Key Quick Metrics -->
+            <div class="hero-stats">
+              <div class="stat-card">
+                <div class="stat-number">7<span class="accent">+</span></div>
+                <div class="stat-label">Games &amp; Interactive Demos</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">UE5<span class="accent"> &amp; C++</span></div>
+                <div class="stat-label">Core Gameplay Focus</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">EXR<span class="accent"> School</span></div>
+                <div class="stat-label">Game Dev Academy</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right: Clean Spec Card -->
+          <div class="hero-visual">
+            <div class="hero-spec-card">
+              <div class="spec-card-header">
+                <div class="spec-dots">
+                  <span class="spec-dot red"></span>
+                  <span class="spec-dot yellow"></span>
+                  <span class="spec-dot green"></span>
+                </div>
+                <span class="spec-badge">PORTFOLIO STATUS // READY</span>
+              </div>
+
+              <div class="spec-list">
+                <div class="spec-item">
+                  <div class="spec-icon">⚡</div>
+                  <div class="spec-details">
+                    <div class="spec-title">Primary Focus: Unreal Engine 5</div>
+                    <div class="spec-desc">Developing solo third-person zombie survival game <em>"Outbreak: Last Stand"</em> & runner <em>"Street Heist"</em> using C++, Blueprints, and Niagara VFX.</div>
+                  </div>
+                </div>
+
+                <div class="spec-item">
+                  <div class="spec-icon">🏆</div>
+                  <div class="spec-details">
+                    <div class="spec-title">Game Jam Developer</div>
+                    <div class="spec-desc">Collaborated in team game jams to produce <em>"High Tide"</em>, engineering high-precision 3D maze platforming mechanics and ledge mantling under strict deadlines.</div>
+                  </div>
+                </div>
+
+                <div class="spec-item">
+                  <div class="spec-icon">🏫</div>
+                  <div class="spec-details">
+                    <div class="spec-title">EXR School of Game Dev</div>
+                    <div class="spec-desc">Enrolled in advanced game architecture and studio-grade production pipeline curriculum.</div>
+                  </div>
+                </div>
+
+                <div class="spec-item">
+                  <div class="spec-icon">🎓</div>
+                  <div class="spec-details">
+                    <div class="spec-title">B.Tech in Computer Science</div>
+                    <div class="spec-desc">Rigorous foundation in data structures, algorithms, spatial partitioning, linear algebra, and memory optimization.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           PROJECTS SHOWCASE SECTION
+           ========================================================================== -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Featured Game Projects</span>
+            <h2 class="section-title">Games &amp; <span class="highlight">Interactive Titles</span></h2>
+            <p class="section-desc">
+              Explore my gameplay systems built in <strong>Unreal Engine 5</strong>, collaborative <strong>Game Jam</strong> projects, <strong>Unity (C#)</strong>, and live interactive browser games.
+            </p>
+          </div>
+
+          <!-- Tag Filters -->
+          <div class="projects-filter-bar">
+            <button class="filter-btn active" data-filter="all">All Games (7)</button>
+            <button class="filter-btn" data-filter="unreal">Unreal Engine (3)</button>
+            <button class="filter-btn" data-filter="unity">Unity (1)</button>
+            <button class="filter-btn" data-filter="browser">Web Games (3)</button>
+          </div>
+
+          <!-- Projects Grid Container (Populated dynamically via projects-data.js) -->
+          <div class="projects-grid" id="projects-grid"></div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SKILLS & CS FOUNDATIONS SECTION
+           ========================================================================== -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Technical Repertoire</span>
+            <h2 class="section-title">Skills &amp; <span class="highlight">CS Foundations</span></h2>
+            <p class="section-desc">
+              Deep computer science theory paired with hands-on expertise in game engine architecture, real-time math, and gameplay programming.
+            </p>
+          </div>
+
+          <div class="skills-grid-layout">
+            <!-- Card 1: Programming Languages -->
+            <div class="skill-category-card">
+              <div class="category-header">
+                <div class="category-icon">💻</div>
+                <h3 class="category-title">Programming Languages</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-item-header">
+                    <span class="skill-item-name">C++ (17 / 20)</span>
+                    <span class="skill-item-level">Core Focus</span>
+                  </div>
+                  <p class="skill-item-desc">Memory management, pointers, RAII, custom actor components, gameplay frameworks.</p>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-header">
+                    <span class="skill-item-name">Blueprints (UE5)</span>
+                    <span class="skill-item-level">Advanced</span>
+                  </div>
+                  <p class="skill-item-desc">Player controllers, Animation Blueprints, event dispatchers, Enhanced Input mappings.</p>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-header">
+                    <span class="skill-item-name">C# (.NET)</span>
+                    <span class="skill-item-level">Proficient</span>
+                  </div>
+                  <p class="skill-item-desc">Unity scripting, 3D physics interaction, mesh slicing, split-screen cameras.</p>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-header">
+                    <span class="skill-item-name">Python &amp; JavaScript</span>
+                    <span class="skill-item-level">Intermediate</span>
+                  </div>
+                  <p class="skill-item-desc">Tooling scripts, algorithmic logic, Canvas API, Web Audio prototypes.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Engines & Industry Tools -->
+            <div class="skill-category-card">
+              <div class="category-header">
+                <div class="category-icon">🛠️</div>
+                <h3 class="category-title">Game Engines &amp; Tools</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-item-header">
+                    <span class="skill-item-name">Unreal Engine 5</span>
+                    <span class="skill-item-level">Primary Focus</span>
+                  </div>
+                  <p class="skill-item-desc">Gameplay C++, Character Movement, Niagara VFX, EQS AI horde systems, Lumen.</p>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-header">
+                    <span class="skill-item-name">EXR School of Game Dev</span>
+                    <span class="skill-item-level">Active Course</span>
+                  </div>
+                  <p class="skill-item-desc">Professional studio curriculum, game architecture, asset pipelines, industry standards.</p>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-header">
+                    <span class="skill-item-name">Unity 2022 LTS</span>
+                    <span class="skill-item-level">Proficient</span>
+                  </div>
+                  <p class="skill-item-desc">Rigidbody physics, Cinemachine, dynamic mesh deformation, custom shaders.</p>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-header">
+                    <span class="skill-item-name">Git &amp; Version Control</span>
+                    <span class="skill-item-level">Advanced</span>
+                  </div>
+                  <p class="skill-item-desc">Git LFS, branching, merge conflict resolution, team game jam workflows.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Gameplay Systems & CS Theory -->
+            <div class="skill-category-card">
+              <div class="category-header">
+                <div class="category-icon">🧠</div>
+                <h3 class="category-title">Mechanics &amp; CS Theory</h3>
+              </div>
+              <div class="skill-items-list">
+                <div class="skill-item">
+                  <div class="skill-item-name">Gameplay Locomotion &amp; Mechanics</div>
+                  <p class="skill-item-desc">Third-person combat, 3-lane endless runners, dynamic parkour &amp; ledge mantling.</p>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-name">AI &amp; Horde Navigation</div>
+                  <p class="skill-item-desc">Unreal Engine EQS (Environment Query System), NavMesh pathfinding, acoustic aggro triggers.</p>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-name">3D Math &amp; Vector Kinematics</div>
+                  <p class="skill-item-desc">Linear algebra, Dot/Cross products, Raycasting, Quaternions, Overlap calculations.</p>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-name">Optimization &amp; Profiling</div>
+                  <p class="skill-item-desc">Object pooling, garbage collection elimination, frame-budget management, Draw Call batching.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           EDUCATION & TRAINING SECTION
+           ========================================================================== -->
+      <section class="section" id="education">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Academic &amp; Studio Training</span>
+            <h2 class="section-title">Education &amp; <span class="highlight">Training</span></h2>
+            <p class="section-desc">
+              Strong theoretical computer science backing combined with specialized, hands-on game development studio training.
+            </p>
+          </div>
+
+          <div class="education-wrapper">
+            <div class="edu-grid">
+              <!-- Left Card: EXR School of Game Dev -->
+              <div class="edu-card">
+                <div class="edu-badge-row">
+                  <span class="edu-badge">🎮 Game Dev Academy</span>
+                  <span class="edu-badge">Currently Enrolled</span>
+                </div>
+                <h3 class="edu-degree-title">Professional Game Development Course</h3>
+                <div class="edu-school-name">EXR School of Game Dev</div>
+                <p class="edu-desc">
+                  Immersive studio training focusing on <strong>Unreal Engine 5</strong>, gameplay programming with C++ and Blueprints, character movement systems, AI behavior trees, and professional game jam development.
+                </p>
+                <div class="coursework-box">
+                  <div class="coursework-title">Key Practical Modules</div>
+                  <div class="coursework-grid">
+                    <div class="course-item">UE5 Gameplay Architecture</div>
+                    <div class="course-item">C++ Character Locomotion</div>
+                    <div class="course-item">Niagara Particle VFX</div>
+                    <div class="course-item">Game Jam Production Sprints</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Card: B.Tech CS -->
+              <div class="edu-card">
+                <div class="edu-badge-row">
+                  <span class="edu-badge">🎓 Bachelor of Technology</span>
+                  <span class="edu-badge">CS Graduate</span>
+                </div>
+                <h3 class="edu-degree-title">B.Tech in Computer Science &amp; Engineering</h3>
+                <div class="edu-school-name">Computer Science &amp; Engineering Graduate</div>
+                <p class="edu-desc">
+                  Rigorous computer science degree covering foundational algorithms, computational theory, operating systems, multithreading, and mathematics applied to real-time interactive software.
+                </p>
+                <div class="coursework-box">
+                  <div class="coursework-title">Relevant CS Foundations</div>
+                  <div class="coursework-grid">
+                    <div class="course-item">Data Structures &amp; Algorithms</div>
+                    <div class="course-item">3D Vector Math &amp; Linear Algebra</div>
+                    <div class="course-item">Operating Systems &amp; Threads</div>
+                    <div class="course-item">Object-Oriented Design (OOP)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           CONTACT & CONNECT SECTION
+           ========================================================================== -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Get in Touch</span>
+            <h2 class="section-title">Let's Build <span class="highlight">Great Games</span></h2>
+            <p class="section-desc">
+              Looking for opportunities as a Gameplay Programmer, Junior Game Developer, or Unreal Engine Developer. Let's connect!
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Left: Direct Info & Social Cards -->
+            <div class="contact-info-col">
+              <div class="contact-direct-card">
+                <h3 class="direct-title">Direct Contact</h3>
+                <p class="direct-desc">
+                  Feel free to reach out directly via email, check out my code repositories, or view my downloadable CV.
+                </p>
+                <div class="email-display-row">
+                  <a href="mailto:amanami8339@gmail.com">amanami8339@gmail.com</a>
+                  <button class="copy-email-btn" id="copy-email-btn" title="Copy Email">Copy</button>
+                </div>
+              </div>
+
+              <div class="social-links-grid">
+                <a href="https://github.com" target="_blank" rel="noopener" class="social-card">
+                  <span class="social-card-icon">🐙</span>
+                  <div>
+                    <div class="social-card-name">GitHub</div>
+                    <div class="social-card-handle">@mohamedaman</div>
+                  </div>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-card">
+                  <span class="social-card-icon">💼</span>
+                  <div>
+                    <div class="social-card-name">LinkedIn</div>
+                    <div class="social-card-handle">in/mohamed-aman</div>
+                  </div>
+                </a>
+
+                <a href="https://itch.io" target="_blank" rel="noopener" class="social-card">
+                  <span class="social-card-icon">👾</span>
+                  <div>
+                    <div class="social-card-name">Itch.io</div>
+                    <div class="social-card-handle">mohamedaman.itch.io</div>
+                  </div>
+                </a>
+
+                <a href="https://app.usecrayon.ai" target="_blank" rel="noopener" class="social-card">
+                  <span class="social-card-icon">🎨</span>
+                  <div>
+                    <div class="social-card-name">UseCrayon.ai</div>
+                    <div class="social-card-handle">@MohamedAman</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Contact Message Form -->
+            <div class="contact-form-container">
+              <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. Studio Lead / Recruiter" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Your Email</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="recruiter@gamestudio.com" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Message / Opportunity Details</label>
+                  <textarea id="contact-message" class="form-textarea" placeholder="Hi Mohamed, I saw your portfolio and games (High Tide, Outbreak: Last Stand, Street Heist) and would like to discuss an opportunity..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  <span>Send Message</span>
+                  <span>🚀</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">MOHAMED AMAN // GAME DEVELOPER</div>
+          <ul class="footer-nav">
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+            <li><a href="#education" class="footer-link">Education</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 Mohamed Aman. Clean Dual-Theme Architecture with Zero Dependencies.
+          </div>
+          <button class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            ▲ Return to Top
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================================================
+         INTERACTIVE CASE STUDY MODAL
+         ========================================================================== -->
+    <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-container">
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">✕</button>
+
+        <div class="modal-header">
+          <h2 class="modal-title" id="modal-title">Project Title</h2>
+          <div class="modal-subtitle" id="modal-subtitle">Subtitle &amp; Engine</div>
+          <div class="modal-meta-bar">
+            <div class="modal-meta-item">Role: <strong id="modal-role">Lead Programmer</strong></div>
+            <div class="modal-meta-item">Team: <strong id="modal-team">Solo</strong></div>
+            <div class="modal-meta-item">Duration: <strong id="modal-duration">Active</strong></div>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <!-- Overview -->
+          <div class="modal-section">
+            <h3 class="modal-section-title">Project Overview</h3>
+            <p class="modal-text" id="modal-overview">Detailed overview text...</p>
+          </div>
+
+          <!-- Technical Highlights -->
+          <div class="modal-section">
+            <h3 class="modal-section-title">Technical Highlights &amp; Systems</h3>
+            <ul class="modal-highlights-list" id="modal-highlights"></ul>
+          </div>
+
+          <!-- Deep Dive & Code Highlight -->
+          <div class="modal-section" id="modal-deepdive-section">
+            <h3 class="modal-section-title" id="modal-deepdive-heading">Architecture Deep Dive</h3>
+            <p class="modal-text" id="modal-deepdive-text" style="margin-bottom: 1rem;">Deep dive explanation...</p>
+            <div class="modal-code-box">
+              <div class="code-box-header">
+                <span>SOURCE HIGHLIGHT</span>
+                <span>C++ / BLUEPRINTS</span>
+              </div>
+              <pre class="code-box-content"><code id="modal-code-snippet"></code></pre>
+            </div>
+          </div>
+
+          <!-- Action Links Group -->
+          <div class="hero-cta-group" id="modal-links-group" style="margin-top: 1rem;"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

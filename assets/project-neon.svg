@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a001a" />
+      <stop offset="60%" stop-color="#2a0845" />
+      <stop offset="100%" stop-color="#640d5f" />
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="40%" stop-color="#ff7b00" />
+      <stop offset="100%" stop-color="#ffd000" />
+    </linearGradient>
+    <linearGradient id="hoverCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+    <filter id="synthGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#skyGrad)" />
+
+  <!-- Retro Striped Neon Sun -->
+  <g transform="translate(400, 210)">
+    <circle cx="0" cy="0" r="95" fill="url(#sunGrad)" filter="url(#synthGlow)" />
+    <!-- Retro horizontal blinds cuts -->
+    <rect x="-100" y="5" width="200" height="4" fill="#2a0845" />
+    <rect x="-100" y="17" width="200" height="6" fill="#2a0845" />
+    <rect x="-100" y="31" width="200" height="8" fill="#2a0845" />
+    <rect x="-100" y="47" width="200" height="10" fill="#2a0845" />
+    <rect x="-100" y="65" width="200" height="12" fill="#2a0845" />
+  </g>
+
+  <!-- Distant mountains silhouette -->
+  <polygon points="0,270 120,220 220,260 350,190 480,260 620,200 740,250 800,220 800,280 0,280" fill="#1b0033" />
+
+  <!-- Neon Outrun Track / Grid -->
+  <g stroke="#00f0ff" stroke-width="1.5" opacity="0.8">
+    <line x1="0" y1="450" x2="400" y2="250" stroke="#d946ef" stroke-width="2" />
+    <line x1="120" y1="450" x2="400" y2="250" />
+    <line x1="240" y1="450" x2="400" y2="250" />
+    <line x1="340" y1="450" x2="400" y2="250" />
+    <line x1="460" y1="450" x2="400" y2="250" />
+    <line x1="560" y1="450" x2="400" y2="250" />
+    <line x1="680" y1="450" x2="400" y2="250" />
+    <line x1="800" y1="450" x2="400" y2="250" stroke="#d946ef" stroke-width="2" />
+
+    <line x1="0" y1="410" x2="800" y2="410" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="0" y1="320" x2="800" y2="320" />
+    <line x1="0" y1="290" x2="800" y2="290" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+  </g>
+
+  <!-- Sleek Hover Racer Ship -->
+  <g transform="translate(400, 315) scale(1.1)">
+    <!-- Thruster Trail / Plume -->
+    <polygon points="-15,25 0,65 15,25" fill="#00f0ff" filter="url(#synthGlow)" />
+    <polygon points="-8,25 0,50 8,25" fill="#ffffff" />
+    
+    <!-- Ship Body -->
+    <polygon points="0,-40 30,10 45,25 0,20 -45,25 -30,10" fill="#0f172a" stroke="url(#hoverCyan)" stroke-width="2" />
+    <!-- Cockpit Canopy -->
+    <polygon points="0,-25 12,0 0,5 -12,0" fill="#00f0ff" filter="url(#synthGlow)" />
+    <!-- Wingtip Lights -->
+    <circle cx="-45" cy="25" r="3" fill="#ff007f" filter="url(#synthGlow)" />
+    <circle cx="45" cy="25" r="3" fill="#00f0ff" filter="url(#synthGlow)" />
+  </g>
+
+  <text x="40" y="415" font-family="'Orbitron', 'Segoe UI', sans-serif" font-weight="900" font-size="28" fill="#ffffff" letter-spacing="4">NEON VELOCITY</text>
+  <text x="40" y="435" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#00f0ff" letter-spacing="2">GODOT 4 • 4-POINT RAYCAST SUSPENSION PHYSICS</text>
+</svg>

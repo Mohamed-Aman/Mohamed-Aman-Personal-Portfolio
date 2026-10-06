@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tideSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#030b14" />
+      <stop offset="60%" stop-color="#0a2540" />
+      <stop offset="100%" stop-color="#0e3a63" />
+    </linearGradient>
+    <linearGradient id="deepOcean" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="40%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#082f49" />
+    </linearGradient>
+    <linearGradient id="waveFoam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#bae6fd" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="lighthouseBeam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sky & Storm Backdrop -->
+  <rect width="800" height="450" fill="url(#tideSky)" />
+
+  <!-- Moon / Storm Glow -->
+  <circle cx="620" cy="110" r="45" fill="#e0f2fe" opacity="0.3" filter="url(#softGlow)" />
+  <circle cx="620" cy="110" r="32" fill="#bae6fd" opacity="0.6" />
+
+  <!-- Distant Clouds -->
+  <path d="M 50 160 Q 150 120 280 150 Q 380 110 520 140 Q 660 110 760 150 L 800 240 L 0 240 Z" fill="#0c1d30" opacity="0.5" />
+
+  <!-- Lighthouse Silhouette & Sweeping Search Beam -->
+  <g>
+    <!-- Beam -->
+    <polygon points="160,155 780,240 760,340 160,165" fill="url(#lighthouseBeam)" />
+    <!-- Tower -->
+    <polygon points="152,150 168,150 174,270 146,270" fill="#040d1a" />
+    <!-- Lantern Room -->
+    <rect x="150" y="140" width="20" height="12" fill="#fef08a" opacity="0.9" />
+    <polygon points="146,140 160,126 174,140" fill="#040d1a" />
+  </g>
+
+  <!-- Sea Stacks / Jagged Rocks -->
+  <polygon points="280,280 320,180 350,220 370,195 410,280" fill="#061526" />
+  <polygon points="650,290 680,210 710,240 740,290" fill="#061526" />
+
+  <!-- High Tide Level Gauge Indicator (Game HUD Feature) -->
+  <g transform="translate(60, 60)" opacity="0.85">
+    <rect x="0" y="0" width="16" height="120" rx="8" fill="#082f49" stroke="#38bdf8" stroke-width="2" />
+    <rect x="3" y="45" width="10" height="72" rx="5" fill="#38bdf8" />
+    <line x1="22" y1="20" x2="32" y2="20" stroke="#f43f5e" stroke-width="2" />
+    <text x="38" y="24" fill="#f43f5e" font-family="system-ui, sans-serif" font-size="10" font-weight="700">CRITICAL</text>
+    <line x1="22" y1="50" x2="30" y2="50" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="36" y="54" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="9">HIGH TIDE</text>
+  </g>
+
+  <!-- Midground Rolling Ocean Waves -->
+  <path d="M 0 250 C 140 220 220 265 380 240 C 520 220 620 255 800 235 L 800 450 L 0 450 Z" fill="#034870" opacity="0.8" />
+
+  <!-- Dramatic Tidal Wave Crest -->
+  <path d="M -20 300 C 160 250 260 320 440 270 C 600 230 720 290 820 260 L 820 450 L -20 450 Z" fill="url(#deepOcean)" />
+
+  <!-- Wave Foam & Spray Highlights -->
+  <path d="M 0 310 Q 120 270 240 315 Q 360 260 480 300 Q 620 250 800 290" fill="none" stroke="url(#waveFoam)" stroke-width="5" opacity="0.85" />
+  <path d="M 50 330 Q 180 300 320 335 Q 460 295 620 330 Q 720 300 800 320" fill="none" stroke="#e0f2fe" stroke-width="2.5" opacity="0.6" stroke-dasharray="12 8" />
+
+  <!-- Foreground Wave Surge -->
+  <path d="M 0 360 C 180 320 300 390 520 340 C 680 300 760 360 820 335 L 820 450 L 0 450 Z" fill="#082f49" />
+  <path d="M 0 365 Q 200 330 400 375 Q 600 335 800 360" fill="none" stroke="#7dd3fc" stroke-width="3" opacity="0.7" />
+
+  <!-- Floating Survival Platform / Buoy -->
+  <g transform="translate(420, 310)">
+    <polygon points="-30,15 30,15 20,25 -20,25" fill="#f97316" />
+    <rect x="-6" y="-12" width="12" height="26" fill="#f8fafc" />
+    <circle cx="0" cy="-14" r="5" fill="#ef4444" filter="url(#softGlow)" />
+  </g>
+
+  <!-- Title Watermark Badge -->
+  <g transform="translate(400, 410)">
+    <text x="0" y="0" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" letter-spacing="4">HIGH TIDE</text>
+    <text x="0" y="18" text-anchor="middle" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="2">UNREAL ENGINE • GAME JAM PROJECT</text>
+  </g>
+</svg>
